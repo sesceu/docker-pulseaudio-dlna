@@ -1,7 +1,6 @@
-FROM ubuntu:wily
+FROM debian:sid
 
-RUN apt-add-repository ppa:qos/pulseaudio-dlna \
-    && apt-get update \
+RUN apt-get update \
     && apt-get install -y pulseaudio-dlna
 
 ENTRYPOINT ["pulseaudio-dlna"]
